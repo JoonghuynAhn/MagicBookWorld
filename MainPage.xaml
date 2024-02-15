@@ -14,14 +14,14 @@
         <toolkit:MediaElement x:Name="mediaElement"
                       ShouldAutoPlay="True"
                       ShouldShowPlaybackControls="True"
-                      Source="LittleSamba.mp3"
+                      Source="embed://LittleSamba.mp3"
                       HeightRequest="300"
                       WidthRequest="400"/>
         <Image Source="background_image.png" Aspect="Fill" />
         <ScrollView>
             <VerticalStackLayout
                 Spacing="25"
-                Padding="30,0"
+                Padding="30,30"
                 VerticalOptions="Center">
 
                 <!--<Image
@@ -57,30 +57,47 @@
                              Clicked="ImageButton_Clicked"/>
                     <Label Text="Space Travel" TextColor="White" HorizontalOptions="Center" VerticalOptions="End"  HeightRequest="20" />-->
                     <ImageButton x:Name="hockey"
-                                 HeightRequest="150"
-                                 WidthRequest="150"
+                                 HeightRequest="350"
+                                 WidthRequest="200"
                                  CornerRadius="30"
                                  BackgroundColor="Blue"
                                  Aspect="AspectFill"
                                  Clicked="hockey_Clicked"/>
-                    <Label Text="Hockey Learning"  TextColor="White" HorizontalOptions="Center" VerticalOptions="End"  HeightRequest="20" />
-
-                    <ImageButton x:Name="scientist"
-                                 HeightRequest="150"
-                                 WidthRequest="150"
+                    <Label LineBreakMode="WordWrap" HorizontalOptions="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Hockey Rookie Christopher" TextColor="White" FontSize="22" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                <ImageButton x:Name="scientist"
+                                 HeightRequest="350"
+                                 WidthRequest="200"
                                  CornerRadius="30"
                                  Aspect="AspectFill"
                                  Clicked="scientist_Clicked"/>
-                    <Label Text="Female Scientist"  TextColor="White" HorizontalOptions="Center" VerticalOptions="End"  HeightRequest="20" />
-
+                <Label LineBreakMode="WordWrap" HorizontalOptions="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="The first female scientist" TextColor="White" FontSize="22" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            
                 <ImageButton x:Name="tomadventure"
-                                 HeightRequest="150"
-                                 WidthRequest="150"
+                                 HeightRequest="350"
+                                 WidthRequest="200"
                                  CornerRadius="30"
                                  Aspect="AspectFill"
                                  Clicked="tomadventure_Clicked"/>
-                <Label Text="Tom's Adventure"  TextColor="White" HorizontalOptions="Center" VerticalOptions="End"  HeightRequest="20" />
-
+                <Label LineBreakMode="WordWrap" HorizontalOptions="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Tom's adventure" TextColor="White" FontSize="22" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            
             </VerticalStackLayout>
         </ScrollView>
 
