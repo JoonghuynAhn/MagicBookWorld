@@ -16,6 +16,8 @@
             HeightRequest="700"
             VerticalOptions="Start"
                Grid.RowSpan="3"/>
+        
+        
         <StackLayout Orientation="Horizontal"
                         Grid.Row="0"
                         Margin="5">
@@ -43,6 +45,7 @@
                          HorizontalOptions="Start"
                          VerticalOptions="Start"
                          Clicked="ImgbackBtn_Clicked"/>
+            
 
             <ImageButton x:Name="ImgNextBtn"
                             Source="next_icon.png"

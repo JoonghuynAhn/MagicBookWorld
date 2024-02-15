@@ -32,12 +32,9 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Assets\appicon.png" />
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
-
+		<MauiIcon Include="Resources\AppIcon\appiconfg.svg" />
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" />
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
-
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
 
@@ -66,7 +63,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="Assets\appIcon.png" />
 	  <None Remove="Books\Christopher%27s Skate\skate1.png" />
 	  <None Remove="Books\Christopher%27s Skate\skate2.png" />
 	  <None Remove="Books\Christopher%27s Skate\skate3.png" />
@@ -88,11 +84,13 @@
 	  <None Remove="Books\Tom%27s Adventure\tomadventure4.png" />
 	  <None Remove="Books\Tom%27s Adventure\tomadventure5.png" />
 	  <None Remove="Books\Tom%27s Adventure\tomadventure6.png" />
+	  <None Remove="Resources\AppIcon\appiconfg.svg" />
 	  <None Remove="Resources\Images\back_icon.svg" />
 	  <None Remove="Resources\Images\dog.png" />
 	  <None Remove="Resources\Images\hockey0.png" />
 	  <None Remove="Resources\Images\home_icon.svg" />
 	  <None Remove="Resources\Images\next_icon.png" />
+	  <None Remove="Resources\Splash\splash.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -120,6 +118,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Maui.MediaElement" Version="2.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 		<PackageReference Include="Plugin.Maui.Audio" Version="2.1.0" />
 	</ItemGroup>
@@ -146,6 +145,14 @@
 	  <MauiXaml Update="TomAdventure.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Assets\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiSplashScreen Include="Resources\Splash\splash.png" BaseSize="800,800"/>
 	</ItemGroup>
 
 </Project>

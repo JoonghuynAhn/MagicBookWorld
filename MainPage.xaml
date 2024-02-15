@@ -1,14 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+       
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MagicBookWorld.MainPage"
              Shell.NavBarIsVisible="False"
              NavigationPage.HasNavigationBar="False"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              >
     <Grid>
+    <!--<toolkit:MediaElement x:Name="correctMediaElement" IsVisible="false"
+            Source="LittleSamba.mp3" ShouldAutoPlay="True"/>-->
 
-        <!--<Image Source="background_image.png" Aspect="AspectFit" />-->
-    
+        <toolkit:MediaElement x:Name="mediaElement"
+                      ShouldAutoPlay="True"
+                      ShouldShowPlaybackControls="True"
+                      Source="LittleSamba.mp3"
+                      HeightRequest="300"
+                      WidthRequest="400"/>
+        <Image Source="background_image.png" Aspect="Fill" />
         <ScrollView>
             <VerticalStackLayout
                 Spacing="25"
@@ -40,13 +49,13 @@
                     SemanticProperties.Hint="Counts the number of times you click"
                     Clicked="OnCounterClicked"
                     HorizontalOptions="Center" />-->
-                    <ImageButton x:Name="imgButton1"
+                    <!--<ImageButton x:Name="imgButton1"
                              HeightRequest="150"
                              WidthRequest="150"
                              CornerRadius="30"
                              BackgroundColor="Red"
                              Clicked="ImageButton_Clicked"/>
-                    <Label Text="Space Travel" TextColor="White" HorizontalOptions="Center" VerticalOptions="End"  HeightRequest="20" />
+                    <Label Text="Space Travel" TextColor="White" HorizontalOptions="Center" VerticalOptions="End"  HeightRequest="20" />-->
                     <ImageButton x:Name="hockey"
                                  HeightRequest="150"
                                  WidthRequest="150"
@@ -74,6 +83,6 @@
 
             </VerticalStackLayout>
         </ScrollView>
-    </Grid>
 
+    </Grid>
 </ContentPage>
