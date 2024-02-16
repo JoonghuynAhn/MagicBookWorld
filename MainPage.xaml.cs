@@ -9,13 +9,24 @@ public partial class MainPage : ContentPage
 	public MainPage()
 	{
 		InitializeComponent();
-		//imgButton1.Source = ImageSource.FromFile("dog.png");
-		//imgButton1.Source = "dog.png";
-		hockey.Source = "hockey0.png";
+        mediaElement.Source = null;
+        //imgButton1.Source = ImageSource.FromFile("dog.png");
+        //imgButton1.Source = "dog.png";
+        hockey.Source = "hockey0.png";
 		scientist.Source = "femalescientist2.png";
 		tomadventure.Source = "tomadventure2.png";
 
-        mediaElement.Source = MediaSource.FromResource("LittleSamba.mp3");
+        if (DeviceInfo.Platform == DevicePlatform.Android)
+        {
+            mediaElement.Source = MediaSource.FromUri("https://www.youtube.com/watch?v=G9H2aliqkq8");
+        }
+        else if (DeviceInfo.Platform == DevicePlatform.WinUI)
+        {
+            //mediaElement.Source = MediaSource.FromUri("https://www.youtube.com/watch?v=G9H2aliqkq8");
+            mediaElement.Source = MediaSource.FromFile("LittleSamba.mp3");
+
+        }
+        //mediaElement.Source = MediaSource.FromResource("LittleSamba.mp3");
 
     }
 

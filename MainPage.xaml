@@ -12,11 +12,7 @@
             Source="LittleSamba.mp3" ShouldAutoPlay="True"/>-->
 
         <toolkit:MediaElement x:Name="mediaElement"
-                      ShouldAutoPlay="True"
-                      ShouldShowPlaybackControls="True"
-                      Source="embed://LittleSamba.mp3"
-                      HeightRequest="300"
-                      WidthRequest="400"/>
+                      ShouldAutoPlay="True"/>
         <Image Source="background_image.png" Aspect="Fill" />
         <ScrollView>
             <VerticalStackLayout
