@@ -37,35 +37,56 @@ public partial class FemaleScientist : ContentPage
         dialog.Text = dialogs[0];
     }
 
-    private void ImgHomeBtn_Clicked(object sender, EventArgs e)
+    private async void ImgHomeBtn_Clicked(object sender, EventArgs e)
     {
-        //Navigation.PopToRootAsync();
-        Navigation.PushAsync(new MainPage());
+        //var current = Application.Current.MainPage;
+        //var parent = Application.Current.Parent;
+        //await Navigation.PopToRootAsync();
+        //await Navigation.PopAsync();
+        await Navigation.PushAsync(new MainPage());
     }
 
-    private void ImgNextBtn_Clicked(object sender, EventArgs e)
+
+    async void ImgNextBtn_Clicked(object sender, EventArgs e)
     {
         currentImageIndex++;
-
-        if (imagePaths.Count > 0 && currentImageIndex < imagePaths.Count)
+        if (currentImageIndex >= 0)
         {
-            mainImg.Source = imagePaths[currentImageIndex];
-            dialog.Text = dialogs[currentImageIndex];
+            if (imagePaths.Count > 0 && currentImageIndex < imagePaths.Count)
+            {
+                await Task.WhenAny(mainImg.FadeTo(0, 100));
 
+                mainImg.Source = imagePaths[currentImageIndex];
+                dialog.Text = dialogs[currentImageIndex];
+
+                await Task.WhenAny(mainImg.FadeTo(1, 100));
+            }
         }
     }
 
-    private void ImgbackBtn_Clicked(object sender, EventArgs e)
+
+
+    async void ImgbackBtn_Clicked(object sender, EventArgs e)
     {
         currentImageIndex--;
         if (currentImageIndex >= 0)
         {
             if (imagePaths.Count > 0 && currentImageIndex < imagePaths.Count)
             {
+                await Task.WhenAny(mainImg.FadeTo(0, 100));
+
                 mainImg.Source = imagePaths[currentImageIndex];
                 dialog.Text = dialogs[currentImageIndex];
 
+                await Task.WhenAny(mainImg.FadeTo(1, 100));
             }
         }
     }
+
+    private async void TapHome_Tapped(object sender, TappedEventArgs e)
+    {
+        await Navigation.PopAsync();
+
+    }
+
 }

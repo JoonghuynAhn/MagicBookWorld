@@ -5,14 +5,17 @@
              x:Class="MagicBookWorld.MainPage"
              Shell.NavBarIsVisible="False"
              NavigationPage.HasNavigationBar="False"
-             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:media="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui.MediaElement"
+             xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              >
     <Grid>
     <!--<toolkit:MediaElement x:Name="correctMediaElement" IsVisible="false"
             Source="LittleSamba.mp3" ShouldAutoPlay="True"/>-->
 
-        <toolkit:MediaElement x:Name="mediaElement"
-                      ShouldAutoPlay="True"/>
+        <!--<toolkit:MediaElement x:Name="mediaElement"
+                      ShouldAutoPlay="True"/>-->
+        <!--<media:MediaElement ShouldAutoPlay="True" Source="https://chtbl.com/track/84EGD/aphid.fireside.fm/d/1437767933/306e7564-d5eb-4af3-b3b2-e6aa1f21a9ce/8d384f50-213b-4345-9cbe-3a890db26bdd.mp3" />-->
+        <mct:MediaElement x:Name="mediaElement" ShouldAutoPlay="False" Source="embed://LittleSamba.mp3" />
         <Image Source="background_image.png" Aspect="Fill" />
         <ScrollView>
             <VerticalStackLayout
@@ -52,48 +55,37 @@
                              BackgroundColor="Red"
                              Clicked="ImageButton_Clicked"/>
                     <Label Text="Space Travel" TextColor="White" HorizontalOptions="Center" VerticalOptions="End"  HeightRequest="20" />-->
+                <Grid RowDefinitions=".2*, .6*, .1*">
                     <ImageButton x:Name="hockey"
-                                 HeightRequest="350"
-                                 WidthRequest="200"
-                                 CornerRadius="30"
-                                 BackgroundColor="Blue"
-                                 Aspect="AspectFill"
-                                 Clicked="hockey_Clicked"/>
-                    <Label LineBreakMode="WordWrap" HorizontalOptions="Center">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="Hockey Rookie Christopher" TextColor="White" FontSize="22" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                <ImageButton x:Name="scientist"
-                                 HeightRequest="350"
-                                 WidthRequest="200"
-                                 CornerRadius="30"
-                                 Aspect="AspectFill"
-                                 Clicked="scientist_Clicked"/>
-                <Label LineBreakMode="WordWrap" HorizontalOptions="Center">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <Span Text="The first female scientist" TextColor="White" FontSize="22" />
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-            
-                <ImageButton x:Name="tomadventure"
-                                 HeightRequest="350"
-                                 WidthRequest="200"
-                                 CornerRadius="30"
-                                 Aspect="AspectFill"
-                                 Clicked="tomadventure_Clicked"/>
-                <Label LineBreakMode="WordWrap" HorizontalOptions="Center">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <Span Text="Tom's adventure" TextColor="White" FontSize="22" />
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-            
+                                 Grid.RowSpan="3"
+                                HeightRequest="350"
+                                WidthRequest="200"
+                                CornerRadius="30"
+                                BackgroundColor="Blue"
+                                Aspect="AspectFill"
+                                Clicked="hockey_Clicked"/>
+                        <Label Text="Learn to Skate" TextColor="White" FontSize="22" Grid.Row="2" HorizontalOptions="Center"/>
+                </Grid>
+                <Grid>
+                    <ImageButton x:Name="scientist"
+                                     HeightRequest="350"
+                                     WidthRequest="200"
+                                     CornerRadius="30"
+                                     Aspect="AspectFill"
+                                     Clicked="scientist_Clicked"/>
+                    <Label Text="Learn to Skate" TextColor="White" FontSize="22" Grid.Row="2" HorizontalOptions="Center"/>
+
+                </Grid>
+                <Grid>
+                    <ImageButton x:Name="tomadventure"
+                                     HeightRequest="350"
+                                     WidthRequest="200"
+                                     CornerRadius="30"
+                                     Aspect="AspectFill"
+                                     Clicked="tomadventure_Clicked"/>
+                           <Label Text="Learn to Skate" TextColor="White" FontSize="22" Grid.Row="2" HorizontalOptions="Center"/>
+
+                </Grid>            
             </VerticalStackLayout>
         </ScrollView>
 

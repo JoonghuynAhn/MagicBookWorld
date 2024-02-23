@@ -1,32 +1,21 @@
 ﻿using CommunityToolkit.Maui.Views;
+using Plugin.Maui.Audio;
 
 namespace MagicBookWorld;
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
-
 	public MainPage()
 	{
 		InitializeComponent();
-        mediaElement.Source = null;
-        //imgButton1.Source = ImageSource.FromFile("dog.png");
-        //imgButton1.Source = "dog.png";
         hockey.Source = "hockey0.png";
-		scientist.Source = "femalescientist2.png";
-		tomadventure.Source = "tomadventure2.png";
+        scientist.Source = "femalescientist2.png";
+        tomadventure.Source = "tomadventure2.png";
 
-        if (DeviceInfo.Platform == DevicePlatform.Android)
-        {
-            mediaElement.Source = MediaSource.FromUri("https://www.youtube.com/watch?v=G9H2aliqkq8");
-        }
-        else if (DeviceInfo.Platform == DevicePlatform.WinUI)
-        {
-            //mediaElement.Source = MediaSource.FromUri("https://www.youtube.com/watch?v=G9H2aliqkq8");
-            mediaElement.Source = MediaSource.FromFile("LittleSamba.mp3");
+        //hockey.Source = "company.png";
+        //scientist.Source = "company.png";
+        //tomadventure.Source = "company.png";
 
-        }
-        //mediaElement.Source = MediaSource.FromResource("LittleSamba.mp3");
 
     }
 
@@ -39,6 +28,7 @@ public partial class MainPage : ContentPage
     private void hockey_Clicked(object sender, EventArgs e)
     {
         Navigation.PushAsync(new NavigationPage(new Hockey()));
+
     }
 
     private void scientist_Clicked(object sender, EventArgs e)
