@@ -5,88 +5,47 @@
              x:Class="MagicBookWorld.MainPage"
              Shell.NavBarIsVisible="False"
              NavigationPage.HasNavigationBar="False"
-             xmlns:media="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui.MediaElement"
-             xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              >
     <Grid>
-    <!--<toolkit:MediaElement x:Name="correctMediaElement" IsVisible="false"
-            Source="LittleSamba.mp3" ShouldAutoPlay="True"/>-->
-
-        <!--<toolkit:MediaElement x:Name="mediaElement"
-                      ShouldAutoPlay="True"/>-->
-        <!--<media:MediaElement ShouldAutoPlay="True" Source="https://chtbl.com/track/84EGD/aphid.fireside.fm/d/1437767933/306e7564-d5eb-4af3-b3b2-e6aa1f21a9ce/8d384f50-213b-4345-9cbe-3a890db26bdd.mp3" />-->
-        <mct:MediaElement x:Name="mediaElement" ShouldAutoPlay="False" Source="embed://LittleSamba.mp3" />
-        <Image Source="background_image.png" Aspect="Fill" />
+        <Image Source="background_image.png" Aspect="AspectFill" />
         <ScrollView>
-            <VerticalStackLayout
+            <HorizontalStackLayout
                 Spacing="25"
                 Padding="30,30"
                 VerticalOptions="Center">
-
-                <!--<Image
-                    Source="dotnet_bot.png"
-                    SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                    HeightRequest="200"
-                    HorizontalOptions="Center" />
-
-                <Label
-                    Text="Hello, World!"
-                    SemanticProperties.HeadingLevel="Level1"
-                    FontSize="32"
-                    HorizontalOptions="Center" />
-
-                <Label
-                    Text="Welcome to .NET Multi-platform App UI"
-                    SemanticProperties.HeadingLevel="Level2"
-                    SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                    FontSize="18"
-                    HorizontalOptions="Center" />
-
-                <Button
-                    x:Name="CounterBtn"
-                    Text="Click me"
-                    SemanticProperties.Hint="Counts the number of times you click"
-                    Clicked="OnCounterClicked"
-                    HorizontalOptions="Center" />-->
-                    <!--<ImageButton x:Name="imgButton1"
-                             HeightRequest="150"
-                             WidthRequest="150"
-                             CornerRadius="30"
-                             BackgroundColor="Red"
-                             Clicked="ImageButton_Clicked"/>
-                    <Label Text="Space Travel" TextColor="White" HorizontalOptions="Center" VerticalOptions="End"  HeightRequest="20" />-->
-                <Grid RowDefinitions=".2*, .6*, .1*">
+                <Grid RowDefinitions=".9*,.1*">
                     <ImageButton x:Name="hockey"
-                                 Grid.RowSpan="3"
+                                 Grid.RowSpan="2"
                                 HeightRequest="350"
                                 WidthRequest="200"
                                 CornerRadius="30"
-                                BackgroundColor="Blue"
                                 Aspect="AspectFill"
-                                Clicked="hockey_Clicked"/>
-                        <Label Text="Learn to Skate" TextColor="White" FontSize="22" Grid.Row="2" HorizontalOptions="Center"/>
+                                Clicked="Hockey_Clicked"/>
+                        <Label Text="Learn to Skate" TextColor="White" FontSize="20" Grid.Row="2" HorizontalOptions="Center"/>
                 </Grid>
-                <Grid>
+                <Grid RowDefinitions=".9*,.1*">
                     <ImageButton x:Name="scientist"
-                                     HeightRequest="350"
-                                     WidthRequest="200"
-                                     CornerRadius="30"
-                                     Aspect="AspectFill"
-                                     Clicked="scientist_Clicked"/>
-                    <Label Text="Learn to Skate" TextColor="White" FontSize="22" Grid.Row="2" HorizontalOptions="Center"/>
+                                 Grid.RowSpan="2"
+                                    HeightRequest="350"
+                                    WidthRequest="200"
+                                    CornerRadius="30"
+                                    Aspect="AspectFill"
+                                     Clicked="Scientist_Clicked"/>
+                    <Label Text="Disguised scientist" TextColor="White" FontSize="20" Grid.Row="2" HorizontalOptions="Center"/>
 
                 </Grid>
-                <Grid>
+                <Grid RowDefinitions=".9*,.1*">
                     <ImageButton x:Name="tomadventure"
+                                 Grid.RowSpan="2"
                                      HeightRequest="350"
                                      WidthRequest="200"
                                      CornerRadius="30"
                                      Aspect="AspectFill"
-                                     Clicked="tomadventure_Clicked"/>
-                           <Label Text="Learn to Skate" TextColor="White" FontSize="22" Grid.Row="2" HorizontalOptions="Center"/>
+                                     Clicked="Tomadventure_Clicked"/>
+                    <Label Text="Tom's Adventure" TextColor="White" FontSize="20" Grid.Row="2" HorizontalOptions="Center"/>
 
                 </Grid>            
-            </VerticalStackLayout>
+            </HorizontalStackLayout>
         </ScrollView>
 
     </Grid>

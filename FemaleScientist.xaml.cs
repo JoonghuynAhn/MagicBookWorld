@@ -8,6 +8,9 @@ public partial class FemaleScientist : ContentPage
     public FemaleScientist()
 	{
         InitializeComponent();
+
+        PageStart();
+
         imagePaths = new List<string>
         {
             "FemaleScientist1.png",
@@ -37,13 +40,19 @@ public partial class FemaleScientist : ContentPage
         dialog.Text = dialogs[0];
     }
 
+    private async void PageStart()
+    {
+        await Task.WhenAny(mainImg.FadeTo(0, 0));
+        await Task.WhenAny(mainImg.FadeTo(1, 300));
+    }
+
     private async void ImgHomeBtn_Clicked(object sender, EventArgs e)
     {
         //var current = Application.Current.MainPage;
         //var parent = Application.Current.Parent;
-        //await Navigation.PopToRootAsync();
+        await Navigation.PopToRootAsync();
         //await Navigation.PopAsync();
-        await Navigation.PushAsync(new MainPage());
+        //await Navigation.PushAsync(new MainPage());
     }
 
 

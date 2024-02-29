@@ -94,12 +94,14 @@
 	  <None Remove="Books\Tom%27s Adventure\tomadventure6.png" />
 	  <None Remove="Resources\AppIcon\appiconfg.svg" />
 	  <None Remove="Resources\Images\background_image.png" />
+	  <None Remove="Resources\Images\background_image2.png" />
 	  <None Remove="Resources\Images\back_icon.svg" />
 	  <None Remove="Resources\Images\company.jpg" />
 	  <None Remove="Resources\Images\dog.png" />
 	  <None Remove="Resources\Images\hockey0.png" />
 	  <None Remove="Resources\Images\home_icon.svg" />
 	  <None Remove="Resources\Images\next_icon.png" />
+	  <None Remove="Resources\Raw\sample.mp3" />
 	  <None Remove="Resources\Splash\splash.png" />
 	</ItemGroup>
 
@@ -136,6 +138,8 @@
 		<PackageReference Include="CommunityToolkit.Maui.MediaElement" Version="2.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 		<PackageReference Include="Plugin.Maui.Audio" Version="2.1.0" />
+		<PackageReference Include="Plugin.MediaManager" Version="1.2.2" />
+		<PackageReference Include="System.Windows.Extensions" Version="8.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -145,9 +149,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="DialogPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	  <MauiXaml Update="FemaleScientist.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

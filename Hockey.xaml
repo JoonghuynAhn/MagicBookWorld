@@ -4,7 +4,9 @@
              xmlns:local="clr-namespace:MagicBookWorld"
              x:Class="MagicBookWorld.Hockey"
              NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="background_image_dark.png"
              Title="hockey">
+        
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -13,15 +15,15 @@
         </Grid.RowDefinitions>
             <Image Grid.Row="0" 
                    x:Name="mainImg"
-                   VerticalOptions="Start" 
-                   Aspect="Fill"
+                   VerticalOptions="Center" 
+                   Aspect="AspectFit"
                    Grid.RowSpan="2"/>
 
         <Frame HeightRequest="45"
                WidthRequest="45"
                Background="orange"
                Padding="0"
-               Margin="0"
+               Margin="10"
                HorizontalOptions="Start" VerticalOptions="Start">
             <ImageButton x:Name="ImgHomeBtn"
                          Grid.Row="0"
@@ -48,15 +50,15 @@
 
 
         <ImageButton x:Name="ImgNextBtn"
-                        Grid.Row="1"
-                            Source="next_icon.png"
-                            CornerRadius="10"
-                            BackgroundColor="White"
-                            HeightRequest="40"
-                            WidthRequest="40"
-                            HorizontalOptions="EndAndExpand"
-                            VerticalOptions="Start"
-                         Clicked="ImgNextBtn_Clicked"/>
+                    Grid.Row="1"
+                    Source="next_icon.png"
+                    CornerRadius="10"
+                    BackgroundColor="White"
+                    HeightRequest="40"
+                    WidthRequest="40"
+                    HorizontalOptions="EndAndExpand"
+                    VerticalOptions="Start"
+                    Clicked="ImgNextBtn_Clicked"/>
         <Label 
             Grid.Row="1"
         Background="yellow"

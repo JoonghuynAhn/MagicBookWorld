@@ -28,8 +28,7 @@ public partial class NewPage : ContentPage
 
     private void ImgHomeBtn_Clicked(object sender, EventArgs e)
     {
-        //Navigation.PopToRootAsync();
-        Navigation.PopAsync();
+        Navigation.PopToRootAsync();
     }
 
     private void ImgNextBtn_Clicked(object sender, EventArgs e)

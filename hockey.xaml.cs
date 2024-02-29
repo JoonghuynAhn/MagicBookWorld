@@ -1,5 +1,6 @@
 namespace MagicBookWorld;
 using Microsoft.Maui.Controls;
+using Plugin.Maui.Audio;
 
 public partial class Hockey : ContentPage
 {
@@ -9,6 +10,9 @@ public partial class Hockey : ContentPage
     public Hockey() // constructor
     {
         InitializeComponent();
+
+        PageStart();
+
         imagePaths = new List<string>
         {
             "skate1.png",
@@ -40,19 +44,24 @@ public partial class Hockey : ContentPage
             "With new found confidence, Christopher skated across the rink, relishing every moment." +
             "He felt immensely proud of his progress on the ice."
         };
+
+
+
         mainImg.Source = imagePaths[0];
         //mainImg.Source = "company.jpg";
         dialog.Text = dialogs[0];
 
     }
 
+    private async void PageStart()
+    {
+        await Task.WhenAny(mainImg.FadeTo(0, 0));
+        await Task.WhenAny(mainImg.FadeTo(1, 300));
+    }
+
     private async void ImgHomeBtn_Clicked(object sender, EventArgs e)
     {
-        //var current = Application.Current.MainPage;
-        //var parent = Application.Current.Parent;
-        //await Navigation.PopToRootAsync();
-        //await Navigation.PopAsync();
-        await Navigation.PushAsync(new MainPage());
+        await Navigation.PopToRootAsync();
     }
 
 

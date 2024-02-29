@@ -3,12 +3,15 @@ namespace MagicBookWorld;
 public partial class TomAdventure : ContentPage
 {
     private int currentImageIndex = 0;
-    private List<string> imagePaths;
-    private List<string> dialogs;
+    private readonly List<string> imagePaths;
+    private readonly List<string> dialogs;
 
     public TomAdventure()
 	{
         InitializeComponent();
+
+        PageStart();
+
         imagePaths = new List<string>
         {
             "tomadventure1.png",
@@ -33,15 +36,16 @@ public partial class TomAdventure : ContentPage
         };
         dialog.Text = dialogs[0];
     }
-
+    
+    private async void PageStart()
+    {
+        await Task.WhenAny(mainImg.FadeTo(0, 0));
+        await Task.WhenAny(mainImg.FadeTo(1, 300));
+    }
 
     private async void ImgHomeBtn_Clicked(object sender, EventArgs e)
     {
-        //var current = Application.Current.MainPage;
-        //var parent = Application.Current.Parent;
-        //await Navigation.PopToRootAsync();
-        //await Navigation.PopAsync();
-        await Navigation.PushAsync(new MainPage());
+        await Navigation.PopToRootAsync();
     }
 
 

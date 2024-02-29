@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    NavigationPage.HasNavigationBar="False"
+             xmlns:local="clr-namespace:MagicBookWorld"
              x:Class="MagicBookWorld.TomAdventure"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="background_image.png"
              Title="TomAdventure">
     <Grid>
         <Grid.RowDefinitions>
@@ -13,14 +15,14 @@
         <Image Grid.Row="0" 
                    x:Name="mainImg"
                    VerticalOptions="Start" 
-                   Aspect="Fill"
+                   Aspect="AspectFit"
                    Grid.RowSpan="2"/>
 
         <Frame HeightRequest="45"
                WidthRequest="45"
                Background="orange"
                Padding="0"
-               Margin="0"
+               Margin="10"
                HorizontalOptions="Start" VerticalOptions="Start">
             <ImageButton x:Name="ImgHomeBtn"
                          Grid.Row="0"
