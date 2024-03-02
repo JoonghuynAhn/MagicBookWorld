@@ -4,11 +4,12 @@ namespace MagicBookWorld;
 
 public partial class App : Application
 {
+    readonly IAudioManager audioManager;
 
     public App()
 	{
 		InitializeComponent();
 		
-		MainPage = new NavigationPage(new MainPage());
+		MainPage = new NavigationPage(new MainPage(audioManager));
     }
 }

@@ -1,26 +1,43 @@
-﻿using CommunityToolkit.Maui.Views;
-using MediaManager;
-using MediaManager.Library;
-using Plugin.Maui.Audio;
+﻿using Plugin.Maui.Audio;
 
 namespace MagicBookWorld;
 
 public partial class MainPage : ContentPage
 {
-    public MainPage()
+    private readonly IAudioManager audioManager;
+
+    public MainPage(IAudioManager audioManager)
 	{
-		InitializeComponent();
+        InitializeComponent();
+
+        this.audioManager = audioManager;
+
 
         hockey.Source = "hockey0.png";
         scientist.Source = "femalescientist2.png";
         tomadventure.Source = "tomadventure2.png";
 
+        BackgroundMusicPlayer();
 
+    }
+    public async void PlayAudio()
+    {
+        //var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("WakeUp.wav"));
+        var player = AudioManager.Current.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("sample.mp3"));
+        player.Play();
     }
 
 
+    public async void BackgroundMusicPlayer()
+    {
+        var player = AudioManager.Current.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("sample.mp3"));
+        player.Play();
+    }
+
     async void Hockey_Clicked(object sender, EventArgs e)
     {
+        PlayAudio();
+
         await Task.WhenAny(scientist.FadeTo(0, 50));
         await Task.WhenAny(tomadventure.FadeTo(0, 50));
 
@@ -36,6 +53,7 @@ public partial class MainPage : ContentPage
 
     async void Scientist_Clicked(object sender, EventArgs e)
     {
+        BackgroundMusicPlayer();
         await Task.WhenAny(hockey.FadeTo(0, 100));
         await Task.WhenAny(tomadventure.FadeTo(0, 100));
 

@@ -102,6 +102,7 @@
 	  <None Remove="Resources\Images\home_icon.svg" />
 	  <None Remove="Resources\Images\next_icon.png" />
 	  <None Remove="Resources\Raw\sample.mp3" />
+	  <None Remove="Resources\Raw\WakeUp.wav" />
 	  <None Remove="Resources\Splash\splash.png" />
 	</ItemGroup>
 

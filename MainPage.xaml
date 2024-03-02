@@ -2,11 +2,15 @@
        
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="MagicBookWorld.MainPage"
              Shell.NavBarIsVisible="False"
              NavigationPage.HasNavigationBar="False"
              >
+
     <Grid>
+        <toolkit:MediaElement x:Name="correctMediaElement" IsVisible="false"
+                Source="embed://sample.mp3" />
         <Image Source="background_image.png" Aspect="AspectFill" />
         <ScrollView>
             <HorizontalStackLayout

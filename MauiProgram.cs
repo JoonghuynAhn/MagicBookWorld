@@ -3,6 +3,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Maui.Controls.Compatibility.Hosting;
 using Plugin.Maui.Audio;
 
+
 namespace MagicBookWorld;
 
 public static class MauiProgram
@@ -20,8 +21,7 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
-
-		builder.Services.AddSingleton(AudioManager.Current);
+        builder.Services.AddSingleton(AudioManager.Current);
 		builder.Services.AddTransient<MainPage>();
 
 #if DEBUG
