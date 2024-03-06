@@ -15,8 +15,8 @@ public partial class MainPage : ContentPage
         hockey.Source = "hockey0.png";
         scientist.Source = "femalescientist2.png";
         tomadventure.Source = "tomadventure2.png";
-        //BackgroundMusicPlayer();
-        //MusicPlayerService.musicPlayer("MainPage.mp3");
+        //MusicPlayerService.BackgroundMusicPlayer();
+
         MusicPlayerService.CreateAudioManager("MainPage.mp3");
     }
 
@@ -43,8 +43,7 @@ public partial class MainPage : ContentPage
     async void Hockey_Clicked(object sender, EventArgs e)
     {
         //PlayAudio();
-        MusicPlayerService.Stop();
-        MusicPlayerService.Dispose();
+        //MusicPlayerService.Dispose();
 
 
         await Task.WhenAny(scientist.FadeTo(0, 50));

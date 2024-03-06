@@ -1,4 +1,5 @@
 namespace MagicBookWorld;
+using MagicBookWorld.Services;
 using Microsoft.Maui.Controls;
 using Plugin.Maui.Audio;
 
@@ -12,6 +13,10 @@ public partial class Hockey : ContentPage
         InitializeComponent();
 
         PageStart();
+
+        MusicPlayerService.CreateAudioManager("hockey/hockey.mp3");
+
+
 
         imagePaths = new List<string>
         {
@@ -61,7 +66,9 @@ public partial class Hockey : ContentPage
 
     private async void ImgHomeBtn_Clicked(object sender, EventArgs e)
     {
+        MusicPlayerService.Dispose();
         await Navigation.PopToRootAsync();
+        await Navigation.PushAsync(new MainPage());
     }
 
 

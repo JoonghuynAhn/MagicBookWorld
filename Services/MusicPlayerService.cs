@@ -31,7 +31,7 @@ namespace MagicBookWorld.Services
 
         public static void Stop()
         {
-            player.Dispose();
+            player.Stop();
         }
         
         public static async void musicPlayer(string songPath)
@@ -39,6 +39,12 @@ namespace MagicBookWorld.Services
             await CreateAudioManager(songPath);
             Play();
             //createMusicPlayer = MusicPlayerService.CreateAudioManager("sample.mp3");
+        }
+
+        public static async void BackgroundMusicPlayer()
+        {
+            var player = AudioManager.Current.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("MainPage.mp3"));
+            player.Play();
         }
     }
 }

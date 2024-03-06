@@ -1,4 +1,5 @@
 namespace MagicBookWorld;
+using MagicBookWorld.Services;
 
 public partial class TomAdventure : ContentPage
 {
@@ -11,6 +12,9 @@ public partial class TomAdventure : ContentPage
         InitializeComponent();
 
         PageStart();
+
+        MusicPlayerService.CreateAudioManager("tom's adventure/Somnium.mp3");
+
 
         imagePaths = new List<string>
         {
