@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MagicBookWorld"
+             x:Class="MagicBookWorld.FemaleScientist"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="background_image.png"
+             Title="FemaleScientist">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0" 
+                   x:Name="mainImg"
+                   VerticalOptions="Start" 
+                   Aspect="AspectFit"
+                   Grid.RowSpan="2"/>
+
+        <Frame HeightRequest="45"
+               WidthRequest="45"
+               Background="orange"
+               Padding="0"
+               Margin="10"
+               HorizontalOptions="Start" VerticalOptions="Start">
+            <ImageButton x:Name="ImgHomeBtn"
+                         Grid.Row="0"
+                         Source="home_icon.png"
+                         BackgroundColor="White"
+                         Clicked="ImgHomeBtn_Clicked"/>
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer x:Name="TapHome"/>
+            </Frame.GestureRecognizers>
+        </Frame>
+
+
+        <ImageButton x:Name="ImgbackBtn"
+                        Grid.Row="1"
+                         Source="back_icon.png"
+                         CornerRadius="10"
+                         BackgroundColor="White"
+                         HeightRequest="40"
+                         WidthRequest="40"
+                         HorizontalOptions="Start"
+                         VerticalOptions="Start"
+                         Clicked="ImgbackBtn_Clicked"/>
+
+
+        <ImageButton x:Name="ImgNextBtn"
+                        Grid.Row="1"
+                            Source="next_icon.png"
+                            CornerRadius="10"
+                            BackgroundColor="White"
+                            HeightRequest="40"
+                            WidthRequest="40"
+                            HorizontalOptions="EndAndExpand"
+                            VerticalOptions="Start"
+                         Clicked="ImgNextBtn_Clicked"/>
+        <Label 
+            Grid.Row="1"
+        Background="yellow"
+                x:Name="dialog"
+                Text="Show Cartoon Book Dialog" 
+            HorizontalTextAlignment="Center"
+            VerticalTextAlignment="Center"
+                HeightRequest="60"
+                VerticalOptions="EndAndExpand" />
+    </Grid>
+</ContentPage>

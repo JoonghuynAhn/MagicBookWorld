@@ -101,6 +101,7 @@
 	  <None Remove="Resources\Images\hockey0.png" />
 	  <None Remove="Resources\Images\home_icon.svg" />
 	  <None Remove="Resources\Images\next_icon.png" />
+	  <None Remove="Resources\Raw\MainPage.mp3" />
 	  <None Remove="Resources\Raw\sample.mp3" />
 	  <None Remove="Resources\Raw\WakeUp.wav" />
 	  <None Remove="Resources\Splash\splash.png" />
@@ -144,22 +145,22 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="hockey.xaml.cs">
+	  <Compile Update="Pages\hockey.xaml.cs">
 	    <DependentUpon>Hockey.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="FemaleScientist.xaml">
+	  <MauiXaml Update="Pages\FemaleScientist.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Hockey.xaml">
+	  <MauiXaml Update="Pages\Hockey.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="NewPage.xaml">
+	  <MauiXaml Update="Pages\NewPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="TomAdventure.xaml">
+	  <MauiXaml Update="Pages\TomAdventure.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

@@ -10,6 +10,6 @@ public partial class App : Application
 	{
 		InitializeComponent();
 		
-		MainPage = new NavigationPage(new MainPage(audioManager));
+		MainPage = new NavigationPage(new MainPage());
     }
 }
