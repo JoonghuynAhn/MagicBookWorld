@@ -1,25 +1,59 @@
 
 <h1>Privacy Policy for Magic Book World</h1>
 
-Effective Date: February 16, 2024
+ Welcome to Magic Book World, a free and no-access-required book application (the "App"). This Privacy Policy is designed to help you understand how we collect, use, and safeguard your personal information. By using the App, you agree to the terms outlined in this policy.
+This Privacy Policy is created by Yeonghun Ahn and distributed with ‘Magic Book World’ app.
+*Last update: March 12, 2024.
 
-Welcome to Magic Book World, a free and no-access-required book application (the "App"). This Privacy Policy is designed to help you understand how we collect, use, and safeguard your personal information. By using the App, you agree to the terms outlined in this policy.
+ 
 
-1. Information We Collect:
+GENERAL
 
-We do not require users to create accounts or provide personal information to access the App. As a result, we do not collect any personally identifiable information unless voluntarily provided by users.
+The application "Magic Book World" is a growing collection of author's tales. These tales are designed for children between the ages of three and seven. 
 
-2. Automatically Collected Information:
+ 
 
-The App may collect non-personal information automatically, such as device information, app usage statistics, and anonymous analytics to improve user experience and troubleshoot issues. This information is aggregated and cannot be used to identify individual users.
+COLLECTION OF INFORMATION
 
-3. Cookies and Similar Technologies:
+All received information is used exclusively to improve the quality of the application ‘Magic Book World’ and can not be transferred to third parties.
+
+We do not collect any personal information.
+
+Cookies and Similar Technologies:
 
 We do not use cookies or any similar tracking technologies within the App.
 
-4. Data Security:
 
-We take reasonable measures to secure any information voluntarily provided by users. However, please note that no method of transmission or electronic storage is 100% secure, and we cannot guarantee absolute security.
+
+PERMISSIONS
+
+The "Magic Book World" app is not asking any permissions.
+
+ 
+
+ADVERTISING
+
+The "Magic Book World" app is completely free of ads.
+
+ 
+
+CHANGES
+
+We may update this Privacy Policy periodically. Users will be notified of any significant changes, and the latest version will be accessible within the App.
+
+ 
+
+CONTACT
+
+If you have any questions, concerns, or requests related to your privacy or this Privacy Policy, please contact us at developerjayahn@gmail.com.
+
+Thank you for using Magic Book World. We are committed to providing you with an enjoyable and secure reading experience.
+
+Yeonghun(Jay) Ahn +1 647 778 2860
+
+
+ 
+
 
 5. Third-Party Services:
 
@@ -29,14 +63,5 @@ The App may include links to external websites or content from third-party servi
 
 Magic Book World is not directed at individuals under the age of 13. We do not knowingly collect personal information from children. If you are a parent or guardian and believe that your child has provided us with personal information, please contact us, and we will take steps to delete such information.
 
-7. Changes to the Privacy Policy:
 
-We may update this Privacy Policy periodically. Users will be notified of any significant changes, and the latest version will be accessible within the App.
 
-8. Contact Information:
-
-If you have any questions, concerns, or requests related to your privacy or this Privacy Policy, please contact us at [your contact email].
-
-Thank you for using Magic Book World. We are committed to providing you with an enjoyable and secure reading experience.
-
-Yeonghun(Jay) Ahn +1 647 778 2860
